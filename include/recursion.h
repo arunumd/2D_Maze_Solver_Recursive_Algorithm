@@ -31,7 +31,7 @@ public:
     ~Maze() = default;
 
     /**
-     * @brief The 'spawn' function simply takes in an array of type std::array and then prints
+     * @brief The 'Spawn' function simply takes in an array of type std::array and then prints
      * all its elements to the console using std::cout using a range-based for loop
      * @param board An input array of type std::array which gives all the functionalities
      * of a standard C++ array along with some range based iterators and easy copy and return.
@@ -40,7 +40,7 @@ public:
     void Spawn(std::array<std::string, 6> board);
 
     /**
-     * @brief Initially the scan function prompts the user to enter 'X' and 'Y' co-ordinates
+     * @brief Initially the 'Scan' function prompts the user to enter 'X' and 'Y' co-ordinates
      * for start node 'S' and makes verification checks in the maze for the existance of 'S'.
      * If there exists an 'S' in the user given location, it returns an std::pair of that location.
      * Otherwise if the user does not know the location of the start node 'S', then the
@@ -54,7 +54,7 @@ public:
     const std::pair<int, int> Scan();
 
     /**
-     * @brief The 'play' function applies four orthogonal moves to the current node after
+     * @brief The 'Play' function applies four orthogonal moves to the current node after
      * checking whether they are legal moves or not (not in obstacle space and not
      * beyond boundary of array). After every recursion it checks if the new node
      * is goal node, denoted as 'G'. If it is goal node, then the function returns
@@ -69,7 +69,7 @@ public:
     std::array<std::string, 6> Play(std::array<std::string, 6> board, int a, int b);
 
     /**
-     * @brief The 'check' function verifies whether the current location is a legal move
+     * @brief The 'Check' function verifies whether the current location is a legal move
      * or not. To be more precise, it checks the following : if the intercepts 'a' and 'b'
      * are outside the boundaries of the board; and whether there is an obstacle '#' in the
      * current location and returns 'false' if any of these two conditions is true. Otherwise
@@ -86,8 +86,8 @@ public:
     bool Check(std::array<std::string, 6> board, int a, int b);
 
     /**
-     * @brief The 'action' function triggers the game-play by fetching the possible location of
-     * start node 'S' from the 'scan' function. If there exists a valid location other than (-1, -1)
+     * @brief The 'Action' function triggers the game-play by fetching the possible location of
+     * start node 'S' from the 'Scan' function. If there exists a valid location other than (-1, -1)
      * then the function attempts to identify a path from start node 'S' to goal node 'G'. If after
      * exploiting all recursive path solvers, the function does not find a valid path, it displays a
      * message stating '\textit{A valid path was not found for the current maze below !}'. Otherwise,

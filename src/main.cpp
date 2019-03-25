@@ -11,8 +11,8 @@
 #include <iostream>
 
 /**
-  * @brief The 'main' function creates an object of the Maze class and then invokes the 'action'
-  * function. Later it displays the result of the 'action' function using the 'spawn' function
+  * @brief The 'main' function creates an object of the Maze class and then invokes the 'Action'
+  * function. Later it displays the result of the 'Action' function using the 'Spawn' function
   * derived from the same 'Maze' class
   * @param 0 if program was successful
   */
